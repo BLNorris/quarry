@@ -87,6 +87,10 @@ function dropThrash()
 		"minecraft:cobblestone",
 		"minecraft:stone",
 		"biomesoplenty:mud_ball",
+		"quark:root_item",
+		"minecraft:clay_ball",
+		"quark:limestone",
+		"minecraft: andesite",
 		"minecraft:dirt"
 		}
 
