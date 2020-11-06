@@ -24,7 +24,7 @@ function refuelAll()
 		
 		item = turtle.getItemDetail()
 		if item then
-			turtle.refuel(64)
+			turtle.refuel()
 		end
 	end
 	
