@@ -15,6 +15,8 @@ function GetStartPoint()
     if fs.exists(fs.combine(PATH, "startX"))
     then
         local oldX = fs.open(fs.combine(PATH, "startX"), "r")
+        local xx = oldX.readLine(false)
+        print(xx)
         local x = tonumber(oldX.readLine(false))
         local oldY = fs.open(fs.combine(PATH, "startY"), "r")
         local y = tonumber(oldY.readLine(false))
@@ -41,6 +43,7 @@ function GetPosition()
 end
 
 print("testing")
+print(x,y,z)
 SaveStartPoint(x,y,z)
 print("reading files" )
 local a,b,c = GetStartPoint()
