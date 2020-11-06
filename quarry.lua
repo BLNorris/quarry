@@ -54,6 +54,7 @@ function out(s)
 end
 
 function dropInChest()
+	out("dropInChest")
 	turtle.turnLeft()
 	
 	local success, data = turtle.inspect()
@@ -78,6 +79,8 @@ function dropInChest()
 				end
 			end
 		end
+	else
+		out("Nothing detected")
 	end
 	
 	turtle.turnRight()
@@ -106,6 +109,7 @@ function fuelNeededToGoBack()
 end
 
 function refuel()
+	out("refuel")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
@@ -231,7 +235,7 @@ function digLayer()
 end
 
 function goToOrigin()
-	
+	out("goToOrigin")
 	if facingfw then
 		
 		turtle.turnLeft()
