@@ -4,7 +4,7 @@ os.loadAPI("t")
 local x = 0
 local y = 0
 local z = 0
-io.write("Quarry Size ")
+io.write("Quarry Size? ")
 local max = 16
 max = tonumber(io.read())
 local deep = 64
