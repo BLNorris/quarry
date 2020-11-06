@@ -4,7 +4,9 @@ os.loadAPI("t")
 local x = 0
 local y = 0
 local z = 0
-local max = 64
+io.write("Quarry or bore? ")
+local max = 16
+max = io.read()
 local deep = 64
 local facingfw = true
 
