@@ -1,18 +1,18 @@
-local  PATH
+local  PATH = "quarry"
 
 
 function saveLayerHeight(layer)
     local oldLayer = 64
     makeDir(PATH)
-    if fs.exists(fs.combine(path, "LAYER"))
+    if fs.exists(fs.combine(PATH, "LAYER"))
     then
-        oldfile = fs.open(fs.combine(path, "LAYER"), r)
+        oldfile = fs.open(fs.combine(PATH, "LAYER"), r)
         ols = oldfile.readLine(false)
         oldLayer = tonumber(ols)
     end
     if(oldLayer > layer)
     then
-        file = fs.open(fs.combine(path, "LAYER"),"w")
+        file = fs.open(fs.combine(PATH, "LAYER"),"w")
         file.write(layer)
     end
 end
