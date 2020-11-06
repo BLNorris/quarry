@@ -4,7 +4,7 @@ os.loadAPI("t")
 local x = 0
 local y = 0
 local z = 0
-local max = 16
+local max = 64
 local deep = 64
 local facingfw = true
 
@@ -57,7 +57,8 @@ function dropInChest()
 	local success, data = turtle.inspect()
 	
 	if success then
-		if data.name == "minecraft:chest" then
+		-- if data.name == "minecraft:chest" then
+		if string.find(data.name,"chest") then
 		
 			out("Dropping items in chest")
 			
