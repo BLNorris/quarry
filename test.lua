@@ -5,10 +5,13 @@ function SaveStartPoint(x,y,z)
     fs.makeDir(PATH)
     local filex = fs.open(fs.combine(PATH, "startX"),"w")
     filex.write(x)
+    filex.close()
     local filey = fs.open(fs.combine(PATH, "startY"),"w")
-    filex.write(y)
+    filey.write(y)
+    filey.close()
     local filez = fs.open(fs.combine(PATH, "startZ"),"w")
-    filex.write(z)
+    filez.write(z)
+    filez.close()
 end
 
 function GetStartPoint()
@@ -17,11 +20,18 @@ function GetStartPoint()
         local oldX = fs.open(fs.combine(PATH, "startX"), "r")
         local xx = oldX.readLine(false)
         print(xx)
-        local x = tonumber(oldX.readLine(false))
+        local x = tonumber(xx)
+        print(x)
+        oldX.close()
+
         local oldY = fs.open(fs.combine(PATH, "startY"), "r")
         local y = tonumber(oldY.readLine(false))
+        oldY.close()
+        
+        
         local oldZ = fs.open(fs.combine(PATH, "startZ"), "r")
         local z = tonumber(oldZ.readLine(false))
+        oldZ.close()
         return x,y,z
     end
     return false
