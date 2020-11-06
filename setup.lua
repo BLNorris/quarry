@@ -20,3 +20,5 @@ shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/t.lua t
 
 print("")
 print("Download successful! run with 'quarry'")
+
+shell.run("quarry")
