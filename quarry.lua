@@ -134,7 +134,7 @@ function goDown()
 			return
 		end
 		z = z-1
-		 saveLayerHeight(z)
+		--  saveLayerHeight(z)
 	end
 end
 
