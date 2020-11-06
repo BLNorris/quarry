@@ -16,6 +16,7 @@ function refuel()
 	
 	return false
 end
+
 function refuelAll()
 	out("refuelAll")
 	for i=1, 16 do
@@ -72,21 +73,3 @@ function closeModem()
     rednet.close(modemside)
 end
 
-
-function refuel()
-    out("refuel")
-    for i=1, 16 do
-        -- Only run on Charcoal
-        turtle.select(i)
-        
-        item = turtle.getItemDetail()
-        if item and
-                item.name == "minecraft:coal" and
-                (CHARCOALONLY == false or item.damage == 1) and
-                turtle.refuel(1) then
-            return true
-        end
-    end
-    
-    return false
-end
