@@ -6,7 +6,7 @@ local y = 0
 local z = 0
 io.write("Quarry Size ")
 local max = 16
-max = io.read()
+max = tonumber(io.read())
 local deep = 64
 local facingfw = true
 
