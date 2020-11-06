@@ -2,7 +2,7 @@ local  PATH = "quarryConfig"
 local x, y, z = gps.locate(5)
 
 function SaveStartPoint(x,y,z)
-    os.makeDir(PATH)
+    fs.makeDir(PATH)
     local filex = fs.open(fs.combine(PATH, "startX"),"w")
     filex.write(x)
     local filey = fs.open(fs.combine(PATH, "startY"),"w")
