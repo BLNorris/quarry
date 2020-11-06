@@ -59,6 +59,7 @@ function dropInChest()
 	local success, data = turtle.inspect()
 	
 	if success then
+		out(data.name)
 		-- if data.name == "minecraft:chest" then
 		if string.find(data.name,"chest") then
 		
