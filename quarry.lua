@@ -1,5 +1,6 @@
 os.loadAPI("inv")
 os.loadAPI("t")
+os.loadAPI("u")
 
 local x = 0
 local y = 0
@@ -109,23 +110,7 @@ function fuelNeededToGoBack()
 	return -z + x + y + 2
 end
 
-function refuel()
-	out("refuel")
-	for i=1, 16 do
-		-- Only run on Charcoal
-		turtle.select(i)
-		
-		item = turtle.getItemDetail()
-		if item and
-				item.name == "minecraft:coal" and
-				(CHARCOALONLY == false or item.damage == 1) and
-				turtle.refuel(1) then
-			return true
-		end
-	end
-	
-	return false
-end
+
 
 function moveH()
 	if inv.isInventoryFull() then
@@ -315,10 +300,12 @@ function mainloop()
 end
 
 if USEMODEM then
-	rednet.open("right")
+	openModem()
 end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
+
+refuelAll()
 
 while true do
 
@@ -333,5 +320,5 @@ while true do
 end
 
 if USEMODEM then
-	rednet.close("right")
+	closeModem()
 end
