@@ -23,6 +23,6 @@ shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua u
 
 
 print("")
-print("Download successful! run with 'quarry'")
+print("Download successful! RUNNING")
 
 shell.run("quarry")
