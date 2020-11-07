@@ -98,7 +98,7 @@ function dropThrash()
 	for i=1, 16 do
 		details = turtle.getItemDetail(i)
 		if details then
-			if detail.name == "minecraft:lava_bucket"
+			if details.name == "minecraft:lava_bucket"
 			then 
 				turtle.select(i)
 				turtle.placeDown()
