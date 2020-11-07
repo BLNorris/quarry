@@ -269,7 +269,7 @@ function getPosition()
 end
 
 function goTo(x,y,z)
-local curx,cury,curz = GetPosition()
+local curx,cury,curz = getPosition()
 	while cury ~= y do
 		if cury<y then
 			up()
