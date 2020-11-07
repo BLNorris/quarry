@@ -276,6 +276,7 @@ local curx,cury,curz = getPosition()
 		else
 			down()
 		end
+		curx,cury,curz = getPosition()
 	end
 
 	if curx<x then
@@ -285,6 +286,7 @@ local curx,cury,curz = getPosition()
 	end
 	while curx ~= x do
 		fw()
+		curx,cury,curz = getPosition()
 	end
 
 	if curz<z then
@@ -294,6 +296,7 @@ local curx,cury,curz = getPosition()
 	end
 	while curz ~= z do
 		fw()
+		curx,cury,curz = getPosition()
 	end
 end
 
