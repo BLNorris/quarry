@@ -8,6 +8,7 @@ os.loadAPI("u")
 local  PATH = "quarryConfig"
 local x, y, z = gps.locate(5)
 
+
 local dir = u.GetDirection()
 
 print("testing")
