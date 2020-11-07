@@ -16,3 +16,6 @@ print("reading files" )
 local a,b,c,d = u.GetStartPoint()
 print(a,b,c,d)
 u.RemoveStartPoint()
+
+
+t.goTo(-955,66,-799)

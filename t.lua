@@ -213,46 +213,91 @@ function calcDiretion(x,z,x1,z1)
 end
 
 function faceDirection(dir)
+	local success = false
 	local curDir = getDirection()
 	if curDir == "n" then
 		if dir == "n" then
-			return true
+			success =  true
 		elseif dir == "e" then
-			return left()
+			success =  left()
 		elseif dir == "s" then
-			return turnAround()
+			success =  turnAround()
 		elseif dir == "w" then
-			return right()
+			success =  right()
 		end
 	elseif curDir == "e" then
 		if dir == "n" then
-			return right()
+			success =  right()
 		elseif dir == "e" then
-			return true
+			success =  true
 		elseif dir == "s" then
-			return left()
+			success =  left()
 		elseif dir == "w" then
-			return turnAround()
+			success =  turnAround()
 		end
 	elseif curDir == "s" then
 		if dir == "n" then
-			return turnAround()
+			success =  turnAround()
 		elseif dir == "e" then
-			return right()
+			success =  right()
 		elseif dir == "s" then
-			return true
+			success =  true
 		elseif dir == "w" then
-			return left()
+			success =  left()
 		end
 	elseif curDir == "w" then
 		if dir == "n" then
-			return left()
+			success =  left()
 		elseif dir == "e" then
-			return turnAround()
+			success =  turnAround()
 		elseif dir == "s" then
-			return right()
+			success =  right()
 		elseif dir == "w" then
-			return true
+			success =  true
 		end
 	end
+
+	if success then 
+		currentDirection = dir
+		return true
+	end
 end
+
+function getPosition()
+    x, y, z = gps.locate(5)
+    return x,y,z
+end
+
+function goTo(x,y,z)
+local curx,cury,curz = GetPosition()
+	while cury ~= y do
+		if cury<y then
+			up()
+		else
+			down()
+		end
+	end
+
+	if curx<x then
+		faceDirection("e")
+	elseif curx>x then
+		faceDirection("w")
+	end
+	while curx ~= x do
+		fw()
+	end
+
+	if curz<z then
+		faceDirection("s")
+	elseif curz>z then
+		faceDirection("n")
+	end
+	while curz ~= z do
+		fw()
+	end
+end
+
+--North = z-
+--East =  x+
+--South = z+
+--West =  x-
