@@ -1,22 +1,9 @@
-os.loadAPI("t")
 local  PATH = "quarryConfig"
 --North = z-
 --East =  x+
 --South = z+
 --West =  x-
 
-
-function GetDirection()
-    local x,y,z = gps.locate(5)
-    t.fw()
-    local x1,y1,z1 = gps.locate(5)
-    if z1<z then return "n"
-    elseif z1>z then return "s"
-    elseif x1>x then return "e"
-    elseif x1<x then return "w"
-    end
-
-end
 
 function SaveLayerHeight(layer)
     local oldLayer = 64
