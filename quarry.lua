@@ -11,7 +11,7 @@ local z = 0
 local max = 16
 
 
-if #arg < 0 then
+if #arg > 0 then
 	max = tonumber(arg[1])
 else
 	io.write("Quarry Size? ")
