@@ -282,8 +282,10 @@ print(curx,cury,curz)
 	end
 
 	if curx<x then
+		print("face east")
 		faceDirection("e")
 	elseif curx>x then
+		print("face west")
 		faceDirection("w")
 	end
 	while curx ~= x do
@@ -293,8 +295,10 @@ print(curx,cury,curz)
 	end
 
 	if curz<z then
+print("face north")
 		faceDirection("n")
 	elseif curz>z then
+		print("face south")
 		faceDirection("s")
 	end
 	while curz ~= z do
