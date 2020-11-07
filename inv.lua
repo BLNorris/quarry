@@ -94,6 +94,17 @@ function dropThrash()
 		"minecraft:dirt"
 		}
 
+	turtle.digDown()
+	for i=1, 16 do
+		details = turtle.getItemDetail(i)
+		if details then
+			if detail.name == "minecraft:lava_bucket"
+			then 
+				turtle.select(i)
+				turtle.placeDown()
+			end
+		end
+	end
 	for i=1, 16 do
 	
 		details = turtle.getItemDetail(i)
@@ -103,8 +114,18 @@ function dropThrash()
 			for j=1, #thrash do
 				if details.name == thrash[j] then
 					turtle.select(i)
-					turtle.drop()
+					turtle.dropDown()
 				end
+			end
+		end
+	end
+	for i=1, 16 do
+		details = turtle.getItemDetail(i)
+		if details then
+			if detail.name == "minecraft:bucket"
+			then 
+				turtle.select(i)
+				turtle.placeDown()
 			end
 		end
 	end
