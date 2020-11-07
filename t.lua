@@ -292,9 +292,9 @@ print(curx,cury,curz)
 		print(curx,cury,curz,currentDirection)
 	end
 
-	if curz>z then
+	if curz<z then
 		faceDirection("n")
-	elseif curz<z then
+	elseif curz>z then
 		faceDirection("s")
 	end
 	while curz ~= z do
