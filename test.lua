@@ -1,5 +1,5 @@
 os.loadAPI("u")
-
+os.loadAPI("t")
 --North = z-
 --East =  x+
 --South = z+
@@ -9,7 +9,7 @@ local  PATH = "quarryConfig"
 local x, y, z = gps.locate(5)
 
 
-local dir = t.GetDirection()
+local dir = t.getDirection()
 
 print("testing")
 print(x,y,z, dir)
