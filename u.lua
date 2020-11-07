@@ -80,7 +80,7 @@ function GetStartPoint()
         local oldDir = fs.open(fs.combine(PATH, "startDir"), "r")
         local dir = oldDir.readLine(false)
         oldDir.close()
-        return x,y,z,dir
+        return true,x,y,z,dir
     end
     return false
 end

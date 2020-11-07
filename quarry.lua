@@ -2,12 +2,23 @@ os.loadAPI("inv")
 os.loadAPI("t")
 os.loadAPI("u")
 
+local arg = { ... }
+
+
 local x = 0
 local y = 0
 local z = 0
-io.write("Quarry Size? ")
 local max = 16
-max = tonumber(io.read())
+
+
+if #arg < 0 then
+	max = tonumber(arg[1])
+else
+	io.write("Quarry Size? ")
+	max = tonumber(io.read())
+end
+
+
 local deep = 64
 local facingfw = true
 
