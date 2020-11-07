@@ -8,6 +8,13 @@ function turnAround()
 	
 	return success
 end
+function tr()
+	return turtle.turnRight()
+end
+
+function tl()
+	return turtle.turnLeft()
+end
 
 function dig()
 	local tries = 0
@@ -45,7 +52,11 @@ function digDown()
 			printError("Hit bedrock below!")
 			return false
 		end
-	
+		if data.name == "minecraft:lava"
+		then
+			down()
+			up()
+		end
 		turtle.digDown()
 		sleep(0.4)
 		
@@ -68,6 +79,11 @@ function digUp()
 		if data.name == "minecraft:bedrock" then
 			printError("Hit bedrock above!")
 			return false
+		end
+		if data.name == "minecraft:lava"
+		then
+			up()
+			down()
 		end
 	
 		turtle.digUp()

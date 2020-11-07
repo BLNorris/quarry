@@ -1,3 +1,8 @@
+--North = z-
+--East =  x+
+--South = z+
+--West =  x-
+
 local  PATH = "quarryConfig"
 local x, y, z = gps.locate(5)
 
@@ -18,10 +23,7 @@ function GetStartPoint()
     if fs.exists(fs.combine(PATH, "startX"))
     then
         local oldX = fs.open(fs.combine(PATH, "startX"), "r")
-        local xx = oldX.readLine(false)
-        print(xx)
-        local x = tonumber(xx)
-        print(x)
+        local x = tonumber(oldX.readLine(false))
         oldX.close()
 
         local oldY = fs.open(fs.combine(PATH, "startY"), "r")

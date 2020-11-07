@@ -1,9 +1,9 @@
-local  PATH = "quarry"
+local  PATH = "quarryConfig"
 
 
 function saveLayerHeight(layer)
     local oldLayer = 64
-    makeDir(PATH)
+    fs.makeDir(PATH)
     if fs.exists(fs.combine(PATH, "LAYER"))
     then
         oldfile = fs.open(fs.combine(PATH, "LAYER"), r)

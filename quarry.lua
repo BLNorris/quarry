@@ -291,15 +291,10 @@ end
 function goUp()
 
 	while z < 0 do
-		
 		t.up()
-		
 		z = z+1
-		
 	end
-	
 	goToOrigin()
-	
 end
 
 function mainloop()
