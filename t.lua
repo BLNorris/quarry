@@ -293,9 +293,9 @@ print(curx,cury,curz)
 	end
 
 	if curz<z then
-		faceDirection("s")
-	else
 		faceDirection("n")
+	else
+		faceDirection("s")
 	end
 	while curz ~= z do
 		fw()
