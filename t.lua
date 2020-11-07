@@ -279,29 +279,28 @@ print(curx,cury,curz)
 			down()
 		end
 		curx,cury,curz = getPosition()
-		print(curx,cury,curz)
 	end
 
 	if curx<x then
 		faceDirection("e")
-	else
+	elseif curx>x then
 		faceDirection("w")
 	end
 	while curx ~= x do
 		fw()
 		curx,cury,curz = getPosition()
-		print(curx,cury,curz)
+		print(curx,cury,curz,currentDirection)
 	end
 
-	if curz<z then
+	if curz>z then
 		faceDirection("n")
-	else
+	elseif curz<z then
 		faceDirection("s")
 	end
 	while curz ~= z do
 		fw()
 		curx,cury,curz = getPosition()
-		print(curx,cury,curz)
+		print(curx,cury,curz,currentDirection)
 	end
 end
 
