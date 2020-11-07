@@ -69,7 +69,10 @@ function refuelAll()
 		
 		item = turtle.getItemDetail()
 		if item then
+			if item.name ~= "minecraft:lava_bucket"
+			then
 			turtle.refuel()
+			end
 		end
 	end
 	
