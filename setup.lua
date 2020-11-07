@@ -30,11 +30,11 @@ shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua u
 
 print("Downloading 'q'")
 shell.run("rm q")
-shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua q")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/q.lua q")
 
 print("Downloading 'setHome'")
 shell.run("rm setHome")
-shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua setHome")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/setHome.lua setHome")
 
 
 print("")
