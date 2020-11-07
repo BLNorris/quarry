@@ -270,6 +270,7 @@ end
 
 function goTo(x,y,z)
 local curx,cury,curz = getPosition()
+print(curx,cury,curz)
 	while cury ~= y do
 		if cury<y then
 			up()
@@ -277,26 +278,29 @@ local curx,cury,curz = getPosition()
 			down()
 		end
 		curx,cury,curz = getPosition()
+		print(curx,cury,curz)
 	end
 
 	if curx<x then
 		faceDirection("e")
-	elseif curx>x then
+	else
 		faceDirection("w")
 	end
 	while curx ~= x do
 		fw()
 		curx,cury,curz = getPosition()
+		print(curx,cury,curz)
 	end
 
 	if curz<z then
 		faceDirection("s")
-	elseif curz>z then
+	else
 		faceDirection("n")
 	end
 	while curz ~= z do
 		fw()
 		curx,cury,curz = getPosition()
+		print(curx,cury,curz)
 	end
 end
 

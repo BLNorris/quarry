@@ -17,5 +17,5 @@ local a,b,c,d = u.GetStartPoint()
 print(a,b,c,d)
 u.RemoveStartPoint()
 
-
+print("target",-955,66,-799)
 t.goTo(-955,66,-799)
