@@ -90,7 +90,7 @@ function dropThrash()
 		"quark:root_item",
 		"minecraft:clay_ball",
 		"quark:limestone",
-		"minecraft: andesite",
+		"minecraft:andesite",
 		"minecraft:dirt"
 		}
 
