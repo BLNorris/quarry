@@ -36,6 +36,10 @@ print("Downloading 'setHome'")
 shell.run("rm setHome")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/setHome.lua setHome")
 
+print("Downloading 'qs'")
+shell.run("rm qs")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/qs.lua qs")
+
 
 print("")
 print("Download successful!")
