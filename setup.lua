@@ -12,6 +12,13 @@ print("Downloading 'inv'")
 shell.run("rm inv")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/inv.lua inv")
 
+print("Downloading 'test'")
+shell.run("rm test")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/test.lua inv")
+
+print("Downloading 'wall'")
+shell.run("rm wall")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/wall.lua inv")
 
 print("Downloading 't'")
 shell.run("rm t")
@@ -24,5 +31,3 @@ shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua u
 
 print("")
 print("Download successful! RUNNING")
-
-shell.run("quarry")
