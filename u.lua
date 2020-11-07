@@ -1,4 +1,4 @@
-local t = require("t")
+os.loadAPI("t")
 local  PATH = "quarryConfig"
 --North = z-
 --East =  x+

@@ -1,4 +1,4 @@
-local u  = require("u")
+os.loadAPI("u")
 
 --North = z-
 --East =  x+
