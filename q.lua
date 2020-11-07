@@ -6,5 +6,5 @@ if has then
     print("going to ",a,b,c)
  t.goTo(a,b,c)
  t.faceDirection("n")
+ shell.run("quarry",32)
 end
-shell.run("quarry",32)
