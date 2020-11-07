@@ -219,19 +219,19 @@ function faceDirection(dir)
 		if dir == "n" then
 			success =  true
 		elseif dir == "e" then
-			success =  left()
+			success =  right()
 		elseif dir == "s" then
 			success =  turnAround()
 		elseif dir == "w" then
-			success =  right()
+			success =  left()
 		end
 	elseif curDir == "e" then
 		if dir == "n" then
-			success =  right()
+			success =  left()
 		elseif dir == "e" then
 			success =  true
 		elseif dir == "s" then
-			success =  left()
+			success =  right()
 		elseif dir == "w" then
 			success =  turnAround()
 		end
@@ -239,25 +239,26 @@ function faceDirection(dir)
 		if dir == "n" then
 			success =  turnAround()
 		elseif dir == "e" then
-			success =  right()
+			success =  left()
 		elseif dir == "s" then
 			success =  true
 		elseif dir == "w" then
-			success =  left()
+			success =  right()
 		end
 	elseif curDir == "w" then
 		if dir == "n" then
-			success =  left()
+			success =  right()
 		elseif dir == "e" then
 			success =  turnAround()
 		elseif dir == "s" then
-			success =  right()
+			success =  left()
 		elseif dir == "w" then
 			success =  true
 		end
 	end
 
 	if success then 
+		print("was ",currentDirection," now ",dir)
 		currentDirection = dir
 		return true
 	end
