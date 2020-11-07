@@ -6,7 +6,7 @@ local  PATH = "quarryConfig"
 --West =  x-
 
 
-function getDirection()
+function GetDirection()
     local x,y,z = gps.locate(5)
     t.fw()
     local x1,y1,z1 = gps.locate(5)
@@ -18,7 +18,7 @@ function getDirection()
 
 end
 
-function saveLayerHeight(layer)
+function SaveLayerHeight(layer)
     local oldLayer = 64
     fs.makeDir(PATH)
     if fs.exists(fs.combine(PATH, "LAYER"))
@@ -34,7 +34,7 @@ function saveLayerHeight(layer)
     end
 end
     
-function openModem()
+function OpenModem()
     local modemside = "right"
     perfs = peripheral.getNames()
     for i=1,#perfs do
@@ -46,7 +46,7 @@ function openModem()
     end
     rednet.open(modemside)
 end
-function closeModem()
+function CloseModem()
     local modemside = "right"
     perfs = peripheral.getNames()
     for i=1,#perfs do
@@ -59,7 +59,7 @@ function closeModem()
     rednet.close(modemside)
 end
 
-function SaveStartPoint(x,y,z)
+function SaveStartPoint(x,y,z,dir)
     fs.makeDir(PATH)
     local filex = fs.open(fs.combine(PATH, "startX"),"w")
     filex.write(x)
@@ -70,6 +70,10 @@ function SaveStartPoint(x,y,z)
     local filez = fs.open(fs.combine(PATH, "startZ"),"w")
     filez.write(z)
     filez.close()
+    filey.close()
+    local filed = fs.open(fs.combine(PATH, "startDir"),"w")
+    filed.write(dir)
+    filed.close()
 end
 
 function GetStartPoint()
@@ -83,11 +87,14 @@ function GetStartPoint()
         local y = tonumber(oldY.readLine(false))
         oldY.close()
         
-        
         local oldZ = fs.open(fs.combine(PATH, "startZ"), "r")
         local z = tonumber(oldZ.readLine(false))
         oldZ.close()
-        return x,y,z
+
+        local oldDir = fs.open(fs.combine(PATH, "startDir"), "r")
+        local dir = oldDir.readLine(false)
+        oldDir.close()
+        return x,y,z,dir
     end
     return false
 end
@@ -98,6 +105,7 @@ function RemoveStartPoint()
         fs.delete(fs.combine(PATH, "startX"))
         fs.delete(fs.combine(PATH, "startY"))
         fs.delete(fs.combine(PATH, "startZ"))
+        fs.delete(fs.combine(PATH, "startDir"))
         return true
     end
     return false

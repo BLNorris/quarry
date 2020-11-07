@@ -1,7 +1,12 @@
 os.loadAPI("u")
 os.loadAPI("t")
-
 local containeraslot = 16
+
+local x,y,z = u.GetPosition()
+local dir = u.GetDirection()
+print(x,y,z,dir)
+u.SaveStartPoint(x,y,z,dir)
+
 
 io.write("Length? ")
 local Length = 16
