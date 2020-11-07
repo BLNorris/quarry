@@ -193,9 +193,9 @@ function back(l)
 end
 
 function getDirection()
-	-- if currentDirection ~= nil
-	-- then return currentDirection
-	-- end
+	if currentDirection ~= nil
+	then return currentDirection
+	end
 	local x,y,z = gps.locate(5)
 	fw()
 	local x1,y1,z1 = gps.locate(5)
