@@ -294,10 +294,10 @@ print(curx,cury,curz)
 		print(curx,cury,curz,currentDirection)
 	end
 
-	if curz<z then
+	if curz>z then
 print("face north")
 		faceDirection("n")
-	elseif curz>z then
+	elseif curz<z then
 		print("face south")
 		faceDirection("s")
 	end
