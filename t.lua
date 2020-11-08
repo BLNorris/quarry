@@ -10,13 +10,29 @@ function turnAround()
 	return success
 end
 
-function right()
-	currentDirection = nil
+function right()	
+	if currentDirection == "n" then
+		currentDirection = "e"
+	elseif currentDirection == "e" then
+		currentDirection = "s"
+	elseif currentDirection == "s" then
+		currentDirection = "w"
+	elseif currentDirection == "w" then
+		currentDirection = "n"
+	end
 	return turtle.turnRight()
 end
 
 function left()
-	currentDirection = nil
+	if currentDirection == "n" then
+		currentDirection = "w"
+	elseif currentDirection == "e" then
+		currentDirection = "n"
+	elseif currentDirection == "s" then
+		currentDirection = "e"
+	elseif currentDirection == "w" then
+		currentDirection = "s"
+	end
 	return turtle.turnLeft()
 end
 

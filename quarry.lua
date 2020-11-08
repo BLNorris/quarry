@@ -8,7 +8,7 @@ local arg = { ... }
 local x = 0
 local y = 0
 local z = 0
-local max = 16
+local max = 20
 
 
 if #arg > 0 then
@@ -17,9 +17,13 @@ else
 	io.write("Quarry Size? ")
 	max = tonumber(io.read())
 end
+if #arg > 1 then
+	x = tonumber(arg[2])
+	y = tonumber(arg[3])
+	z = tonumber(arg[4])
+end
 
-
-local deep = 64
+local deep = 80
 local facingfw = true
 
 local OK = 0
@@ -107,9 +111,9 @@ function dropInChest()
 	local success, data = turtle.inspect()
 	
 	if success then
-		out(data.name)
+		--out(data.name)
 		-- if data.name == "minecraft:chest" then
-		if string.find(data.name,"chest") then
+		if string.find(data.name,"chest") then--use any chest
 		
 			out("Dropping items in chest")
 			

@@ -20,8 +20,17 @@ end
 
 local has,a,b,c,d = u.GetStartPoint()
 if has then
-    print("going to ",a,b,c)
- t.goTo(a,b,c)
- t.faceDirection("n")
- shell.run("quarry",32)
+--  print("going to ",a,b,c)
+--  t.goTo(a,b,c)
+--  t.faceDirection("n")
+--  shell.run("quarry",32)
+
+local x1 = x-a
+local y1 = y-b
+local z1 = z-c
+
+print("home should be " ,x1,y1,z1)
+
+
+
 end
