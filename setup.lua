@@ -44,6 +44,12 @@ print("Downloading 'r'")
 shell.run("rm r")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/r.lua r")
 
+shell.run("rm startup")
 shell.run("copy q startup")
+-- io.write("Setup Quarry? (y/n):")
+-- quarry = io.read()
+-- if quarry == "y"then
+--     shell.run("qs")
+-- end
 print("")
 print("Download successful!")
