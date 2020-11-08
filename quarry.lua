@@ -119,6 +119,7 @@ function dropInChest()
 				data = turtle.getItemDetail()
 				
 				if data ~= nil and
+						data.name == "minecraft:lava_bucket" and
 						(data.name == "minecraft:coal" and CHARCOALONLY == false) == false and
 						(data.damage == nil or data.name .. data.damage ~= "minecraft:coal1") then
 
