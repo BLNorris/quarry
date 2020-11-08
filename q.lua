@@ -1,5 +1,7 @@
 os.loadAPI("u")
 os.loadAPI("t")
+print("Waiting for a bit in case")
+os.sleep(10)
 local x,y,z = gps.locate(5)
 local count = 1
 while x == nil do
