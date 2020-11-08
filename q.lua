@@ -1,6 +1,8 @@
 os.loadAPI("u")
 os.loadAPI("t")
 shell.run("z")
+local fuel = turtle.getFuelLevel()
+print("fuel level: ",fuel )
 print("Waiting for a bit in case")
 os.sleep(10)
 local x,y,z = gps.locate(5)

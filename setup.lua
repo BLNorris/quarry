@@ -44,6 +44,6 @@ print("Downloading 'r'")
 shell.run("rm r")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/r.lua r")
 
-
+shell.run("copy q startup")
 print("")
 print("Download successful!")
