@@ -4,7 +4,7 @@ shell.run("z")
 local fuel = turtle.getFuelLevel()
 print("fuel level: ",fuel )
 print("Waiting for a bit in case")
-os.sleep(10)
+os.sleep(3)
 local x,y,z = gps.locate(5)
 local count = 1
 while x == nil do
