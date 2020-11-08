@@ -40,6 +40,10 @@ print("Downloading 'qs'")
 shell.run("rm qs")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/qs.lua qs")
 
+print("Downloading 'r'")
+shell.run("rm r")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/r.lua r")
+
 
 print("")
 print("Download successful!")
