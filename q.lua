@@ -31,6 +31,6 @@ local z1 = z-c
 
 print("home should be " ,x1,y1,z1)
 
-
+shell.run("quarry",10,x1,y1,z1)
 
 end

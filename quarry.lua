@@ -8,7 +8,7 @@ local arg = { ... }
 local x = 0
 local y = 0
 local z = 0
-local max = 20
+local max = 10
 
 
 if #arg > 0 then
