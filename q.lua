@@ -20,17 +20,18 @@ end
 
 local has,a,b,c,d = u.GetStartPoint()
 if has then
---  print("going to ",a,b,c)
---  t.goTo(a,b,c)
---  t.faceDirection("n")
---  shell.run("quarry",32)
+ print("going to ",a,b,c)
+ t.goTo(a,b,c)
+ t.faceDirection("n")
+ shell.run("quarry",32)
 
-local x1 = x-a
-local y1 = y-b
-local z1 = z-c
+ --trying to get it to resume without having to go home
+-- local x1 = math.abs(x-a)
+-- local y1 = math.abs(y-b)
+-- local z1 = math.abs(z-c)
 
-print("home should be " ,x1,y1,z1)
+-- print("home should be " ,x1,y1,z1)
 
-shell.run("quarry",10,x1,y1,z1)
+-- shell.run("quarry",10,x1,y1,z1)
 
 end
