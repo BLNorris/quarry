@@ -91,6 +91,7 @@ function dropThrash()
 		"minecraft:clay_ball",
 		"quark:limestone",
 		"minecraft:andesite",
+		"minecraft:gravel",
 		"minecraft:dirt"
 		}
 
