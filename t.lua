@@ -295,6 +295,40 @@ function getPosition()
     return x,y,z
 end
 
+function place()
+	selectCobble()
+	turtle.place()
+
+end
+
+function placeDown()
+	selectCobble()
+	turtle.placeDown()
+
+end
+
+function placeUp()
+	selectCobble()
+	turtle.placeUp()
+end
+
+function selectCobble()
+	slot = 1
+	for i=1, 16 do
+		-- Only run on Charcoal
+		turtle.select(i)
+		
+		item = turtle.getItemDetail()
+		if item then
+			if item.name ~= "minecraft:cobblestone"
+			then
+				slot = i
+			end
+		end
+	end
+	turtle.select(slot)
+end
+
 function goTo(x,y,z)
 local curx,cury,curz = getPosition()
 currentDirection = getDirection()

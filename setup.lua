@@ -44,6 +44,11 @@ print("Downloading 'r'")
 shell.run("rm r")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/r.lua r")
 
+print("Downloading 'bridge'")
+shell.run("rm bridge")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/bridge.lua bridge")
+
+
 shell.run("rm startup")
 shell.run("copy q startup")
 -- io.write("Setup Quarry? (y/n):")
