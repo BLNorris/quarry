@@ -7,7 +7,6 @@ local max = 100
 max = tonumber(arg[1])
 
 function refuelAll()
-	out("refuelAll")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
