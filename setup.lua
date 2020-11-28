@@ -24,6 +24,10 @@ print("Downloading 't'")
 shell.run("rm t")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/t.lua t")
 
+print("Downloading 'tz'")
+shell.run("rm tz")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/tz.lua tz")
+
 print("Downloading 'u'")
 shell.run("rm u")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/u.lua u")
