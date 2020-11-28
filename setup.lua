@@ -52,6 +52,10 @@ print("Downloading 'bridge'")
 shell.run("rm bridge")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/bridge.lua bridge")
 
+print("Downloading 'bridgethin'")
+shell.run("rm bridgethin")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/bridgethin.lua bridgethin")
+
 
 shell.run("rm startup")
 shell.run("copy q startup")
