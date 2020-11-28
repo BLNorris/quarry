@@ -1,5 +1,5 @@
 os.loadAPI("inv")
-os.loadAPI("t")
+os.loadAPI("tz")
 os.loadAPI("u")
 
 
@@ -26,14 +26,14 @@ end
 function mainloop()
 
     while true do
-        t.fw()
-        t.digUp()
-        t.right()
-        t.place()
-        t.turnAround()
-        t.place()
-        t.right()
-        t.placeDown()
+        tz.fw()
+        tz.digUp()
+        tz.right()
+        tz.place()
+        tz.turnAround()
+        tz.place()
+        tz.right()
+        tz.placeDown()
 
 	end
 end
