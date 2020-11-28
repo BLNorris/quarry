@@ -299,10 +299,7 @@ function selectCobble()
 		
 		item = turtle.getItemDetail()
 		if item then
-			if item.name == "minecraft:cobblestone"
-			then
-				slot = i
-			end
+			slot = i
 		end
 	end
 	turtle.select(slot)
