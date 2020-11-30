@@ -300,6 +300,7 @@ function selectCobble()
 		item = turtle.getItemDetail()
 		if item then
 			slot = i
+			break
 		end
 	end
 	turtle.select(slot)

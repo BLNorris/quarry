@@ -23,7 +23,7 @@ if has then
  print("going to ",a,b,c)
  t.goTo(a,b,c)
  t.faceDirection("n")
- shell.run("quarry",32)
+ shell.run("quarry",16)
 
  --trying to get it to resume without having to go home
 -- local x1 = math.abs(x-a)
