@@ -255,13 +255,15 @@ function refuelAll()
 end
 
 function refuelFromEnderChest()
+	out("refuelAll from ender chest")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
 		
 		item = turtle.getItemDetail()
 		if item then
-			if item.name ~= "kibe:entangled_chest"
+			out(item.name)
+			if item.name == "kibe:entangled_chest"
 			then
 				digUp()
 				back()
@@ -274,7 +276,7 @@ function refuelFromEnderChest()
 		end
 	end
 
-	return truew
+	return true
 end
 
 function getDirection()
@@ -353,6 +355,7 @@ function getPosition()
     x, y, z = gps.locate(5)
     return x,y,z
 end
+
 
 function place()
 	selectCobble()
