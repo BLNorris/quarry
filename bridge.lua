@@ -1,27 +1,10 @@
 os.loadAPI("inv")
 os.loadAPI("tz")
+os.loadAPI("t")
 os.loadAPI("u")
-
 
 local max = 100
 max = tonumber(arg[1])
-
-function refuelAll()
-	for i=1, 16 do
-		-- Only run on Charcoal
-		turtle.select(i)
-		
-		item = turtle.getItemDetail()
-		if item then
-			if item.name ~= "minecraft:lava_bucket"
-			then
-			turtle.refuel()
-			end
-		end
-	end
-	
-	return true
-end
 
 function mainloop()
 
@@ -39,13 +22,7 @@ function mainloop()
 end
 
 
-
-
-
-
-
-
-refuelAll()
+t.refuelAll()
 
 while true do
 	local errorcode = mainloop()

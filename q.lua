@@ -1,16 +1,7 @@
 os.loadAPI("u")
 os.loadAPI("t")
 shell.run("z")
-for i=1, 16 do
-    turtle.select(i)
-    item = turtle.getItemDetail()
-    if item then
-        if item.name ~= "minecraft:lava_bucket"
-        then
-        turtle.refuel()
-        end
-    end
-end
+t.refuelAll()
 local fuel = turtle.getFuelLevel()
 print("fuel level: ",fuel )
 print("Waiting for a bit in case")
