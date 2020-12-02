@@ -219,7 +219,6 @@ function back(l)
 end
 
 function refuel()
-	out("refuel")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
@@ -237,7 +236,6 @@ function refuel()
 end
 
 function refuelAll()
-	out("refuelAll")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
@@ -255,14 +253,12 @@ function refuelAll()
 end
 
 function refuelFromEnderChest()
-	out("refuelAll from ender chest")
 	for i=1, 16 do
 		-- Only run on Charcoal
 		turtle.select(i)
 		
 		item = turtle.getItemDetail()
 		if item then
-			out(item.name)
 			if item.name == "kibe:entangled_chest"
 			then
 				digUp()
