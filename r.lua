@@ -1,3 +1,3 @@
 os.loadAPI("t")
-print("refuelAll exept lava")
+print("refuel from entangled chest")
 t.refuelFromEnderChest()
