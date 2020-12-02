@@ -90,6 +90,7 @@ function dropInChest()
 				
 				if data ~= nil and
 						data.name ~= "minecraft:lava_bucket" and
+						data.name ~= "kibe:entangled_chest" and
 						data.name ~= "minecraft:coal"
 						 then
 
@@ -111,7 +112,8 @@ end
 function goDown()
 	while true do
 		if turtle.getFuelLevel() <= fuelNeededToGoBack() then
-			if not refuel() then
+			t.refuelAll()
+			if not refuelFromEnderChest() then
 				return OUTOFFUEL
 			end
 		end
@@ -149,7 +151,8 @@ function moveH()
 	end
 	
 	if turtle.getFuelLevel() <= fuelNeededToGoBack() then
-		if not refuel() then
+		t.refuelAll()
+		if not refuelFromEnderChest() then
 			out("Out of fuel!")
 			return OUTOFFUEL
 		end
@@ -319,8 +322,8 @@ if USEMODEM then
 end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
-
 t.refuelAll()
+t.refuelFromEnderChest()
 
 while true do
 
