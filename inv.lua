@@ -84,6 +84,16 @@ end
 
 function dropThrash()
 	local thrash = {
+		"minecraft:andesite",
+		"blockus:bluestone",
+		"minecraft:diorite",
+		"minecraft:flint",
+		"minecraft:granite",
+		"minecraft:mossy_cobblestone",
+		"byg:scoria_cobblestone",
+		"byg:soapstone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
 		"minecraft:cobblestone",
 		"minecraft:stone",
 		"biomesoplenty:mud_ball",
