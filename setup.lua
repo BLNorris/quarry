@@ -62,7 +62,7 @@ shell.run("rm circle")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/circle.lua circle")
 
 
-shell.run("rm startup")
+-- shell.run("rm startup")
 -- shell.run("copy q startup")
 -- io.write("Setup Quarry? (y/n):")
 -- quarry = io.read()
