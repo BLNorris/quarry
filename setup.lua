@@ -48,6 +48,11 @@ print("Downloading 'r'")
 shell.run("rm r")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/r.lua r")
 
+print("Downloading 'n'")
+shell.run("rm n")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/n.lua n")
+
+
 print("Downloading 'bridge'")
 shell.run("rm bridge")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/bridge.lua bridge")
