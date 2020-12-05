@@ -113,9 +113,7 @@ function goDown()
 	while true do
 		if turtle.getFuelLevel() <= fuelNeededToGoBack() then
 			t.refuelAll()
-			if not refuelFromEnderChest() then
-				return OUTOFFUEL
-			end
+			t.refuelFromSlot2()
 		end
 	
 		if not turtle.down() then
@@ -323,7 +321,7 @@ end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
 t.refuelAll()
-t.refuelFromEnderChest()
+t.refuelFromSlot2()
 
 while true do
 
