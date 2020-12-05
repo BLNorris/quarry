@@ -196,12 +196,8 @@ function dropOffItems()
 		details = turtle.getItemDetail(i)
 		if details then
 		
-			for j=1, #thrash do
-				if details.name == thrash[j] then
 					turtle.select(i)
 					turtle.dropDown()
-				end
-			end
 		end
 	end
 	turtle.select(1)
