@@ -279,7 +279,7 @@ function refuelFromSlot2()
 		turtle.select(2)
 		digDown()
 		turtle.placeDown()
-		turtle.suck()
+		turtle.suckDown()
 		turtle.refuel()
 		turtle.digDown()
 	return true
