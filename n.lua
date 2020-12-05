@@ -24,6 +24,7 @@ function mainloop()
         tz.fw()
         tz.fw()
         tz.fw()
+        print("loop")
 end
 
 

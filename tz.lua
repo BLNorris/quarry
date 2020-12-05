@@ -307,33 +307,33 @@ function selectCobble()
 end
 
 function goTo(x,y,z)
-local curx,cury,curz = getPosition()
-currentDirection = getDirection()
-print(curx,cury,curz)
-	while cury ~= y do
-		if cury<y then
-			up()
-		else
-			down()
+	local curx,cury,curz = getPosition()
+	currentDirection = getDirection()
+	print(curx,cury,curz)
+		while cury ~= y do
+			if cury<y then
+				up()
+			else
+				down()
+			end
+			curx,cury,curz = getPosition()
 		end
-		curx,cury,curz = getPosition()
-	end
 
-	if curx<x then
-		print("face east")
-		faceDirection("e")
-	elseif curx>x then
-		print("face west")
-		faceDirection("w")
-	end
-	while curx ~= x do
-		fw()
-		curx,cury,curz = getPosition()
-		print(curx,cury,curz,currentDirection)
-	end
+		if curx<x then
+			print("face east")
+			faceDirection("e")
+		elseif curx>x then
+			print("face west")
+			faceDirection("w")
+		end
+		while curx ~= x do
+			fw()
+			curx,cury,curz = getPosition()
+			print(curx,cury,curz,currentDirection)
+		end
 
-	if curz>z then
-print("face north")
+		if curz>z then
+	print("face north")
 		faceDirection("n")
 	elseif curz<z then
 		print("face south")

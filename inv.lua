@@ -141,3 +141,69 @@ function dropThrash()
 		end
 	end
 end
+
+function trashcanThrash()
+	local thrash = {
+		"minecraft:andesite",
+		"blockus:bluestone",
+		"minecraft:diorite",
+		"minecraft:flint",
+		"minecraft:granite",
+		"minecraft:mossy_cobblestone",
+		"byg:scoria_cobblestone",
+		"byg:soapstone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:stone",
+		"biomesoplenty:mud_ball",
+		"quark:root_item",
+		"minecraft:clay_ball",
+		"quark:limestone",
+		"minecraft:andesite",
+		"minecraft:gravel",
+		"minecraft:dirt"
+		}
+
+	turtle.digDown()
+	turtle.select(3)
+	turtle.placeDown()
+
+	for i=4, 16 do
+	
+		details = turtle.getItemDetail(i)
+		if details then
+		
+			for j=1, #thrash do
+				if details.name == thrash[j] then
+					turtle.select(i)
+					turtle.dropDown()
+				end
+			end
+		end
+	end
+	turtle.select(3)
+	turtle.digDown()
+end
+
+function dropOffItems()
+	turtle.digDown()
+	turtle.select(1)
+	turtle.placeDown()
+
+	for i=4, 16 do
+	
+		details = turtle.getItemDetail(i)
+		if details then
+		
+			for j=1, #thrash do
+				if details.name == thrash[j] then
+					turtle.select(i)
+					turtle.dropDown()
+				end
+			end
+		end
+	end
+	turtle.select(1)
+	turtle.digDown()
+end

@@ -275,6 +275,16 @@ function refuelFromEnderChest()
 	return true
 end
 
+function refuelFromSlot2()
+		turtle.select(2)
+		digDown()
+		turtle.placeDown()
+		turtle.suck()
+		turtle.refuel()
+		turtle.digDown()
+	return true
+end
+
 function getDirection()
 	if currentDirection ~= nil
 	then return currentDirection

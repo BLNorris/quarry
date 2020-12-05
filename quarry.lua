@@ -132,30 +132,30 @@ function fuelNeededToGoBack()
 	return -z + x + y + 2
 end
 
-
-
 function moveH()
 	if inv.isInventoryFull() then
 		out("Dropping thrash")
-		inv.dropThrash()
+		-- inv.dropThrash()
+		inv.trashcanThrash()
+		inv.dropOffItems()
+		-- if inv.isInventoryFull() then
+		-- 	out ("Stacking items")
+		-- 	inv.stackItems()
+		-- end
 		
-		if inv.isInventoryFull() then
-			out ("Stacking items")
-			inv.stackItems()
-		end
-		
-		if inv.isInventoryFull() then
-			out("Full inventory!")
-			return FULLINV  
-		end
+		-- if inv.isInventoryFull() then
+		-- 	out("Full inventory!")
+		-- 	return FULLINV  
+		-- end
 	end
 	
 	if turtle.getFuelLevel() <= fuelNeededToGoBack() then
 		t.refuelAll()
-		if not refuelFromEnderChest() then
-			out("Out of fuel!")
-			return OUTOFFUEL
-		end
+		t.refuelFromSlot2()
+		-- if not refuelFromEnderChest() then
+		-- 	out("Out of fuel!")
+		-- 	return OUTOFFUEL
+		-- end
 	end
 	
 	if facingfw and y<max-1 then
