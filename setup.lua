@@ -67,6 +67,11 @@ shell.run("rm circle")
 shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/circle.lua circle")
 
 
+print("Downloading 'heylisten'")
+shell.run("rm heylisten")
+shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/heylisten.lua heylisten")
+
+
 -- shell.run("rm startup")
 -- shell.run("copy q startup")
 -- io.write("Setup Quarry? (y/n):")

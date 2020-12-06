@@ -100,7 +100,7 @@ function digUp()
 	local tries = 0
 	
 	local s, data = turtle.inspectUp()
-	if data.name == "minecraft:lava"
+	-- if data.name == "minecraft:lava"
 	-- then
 	-- 	up()
 	-- 	down()
