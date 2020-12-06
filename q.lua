@@ -14,7 +14,7 @@ while x == nil do
     os.sleep(5)
     x,y,z = gps.locate(5)
     count = count + 1
-    if count > 10 then
+    if count > 20 then
         print("Could not get gps fix")
        os.exit() 
     end

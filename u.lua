@@ -32,6 +32,8 @@ function OpenModem()
         end
     end
     rednet.open(modemside)
+     print("opened modem on side:")
+     print (modemside)
 end
 function CloseModem()
     local modemside = "right"

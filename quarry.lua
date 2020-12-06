@@ -35,7 +35,7 @@ local BLOCKEDMOV = 5
 local USRINTERRUPT = 6
 
 local CHARCOALONLY = false
-local USEMODEM = false
+local USEMODEM = true
 
 
 -- Arguments
@@ -316,7 +316,7 @@ function mainloop()
 end
 
 if USEMODEM then
-	openModem()
+	u.openModem()
 end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
@@ -336,5 +336,5 @@ while true do
 end
 
 if USEMODEM then
-	closeModem()
+	u.closeModem()
 end
