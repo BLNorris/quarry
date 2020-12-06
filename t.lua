@@ -66,16 +66,16 @@ function digDown()
 	local tries = 0
 	
 	local s, data = turtle.inspectDown()
-	if data.name == "minecraft:lava"
-	then
-		down()
-		up()
-	end
-	if data.name == "minecraft:water"
-	then
-		down()
-		up()
-	end
+	-- if data.name == "minecraft:lava"
+	-- then
+	-- 	down()
+	-- 	up()
+	-- end
+	-- if data.name == "minecraft:water"
+	-- then
+	-- 	down()
+	-- 	up()
+	-- end
 	while turtle.detectDown() do
 
 		s, data = turtle.inspectDown()
@@ -101,15 +101,15 @@ function digUp()
 	
 	local s, data = turtle.inspectUp()
 	if data.name == "minecraft:lava"
-	then
-		up()
-		down()
-	end
-	if data.name == "minecraft:water"
-	then
-		up()
-		down()
-	end
+	-- then
+	-- 	up()
+	-- 	down()
+	-- end
+	-- if data.name == "minecraft:water"
+	-- then
+	-- 	up()
+	-- 	down()
+	-- end
 	while turtle.detectUp() do
 		s, data = turtle.inspectUp()
 		print(data)
