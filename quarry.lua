@@ -316,7 +316,7 @@ function mainloop()
 end
 
 if USEMODEM then
-	u.openModem()
+	u.OpenModem()
 end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
@@ -336,5 +336,5 @@ while true do
 end
 
 if USEMODEM then
-	u.closeModem()
+	u.CloseModem()
 end
