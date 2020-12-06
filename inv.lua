@@ -152,7 +152,7 @@ function trashcanThrash()
 		"minecraft:mossy_cobblestone",
 		"byg:scoria_cobblestone",
 		"byg:soapstone",
-		"minecraft:cobblestone",
+		"byg:rocky_stone",
 		"minecraft:cobblestone",
 		"minecraft:cobblestone",
 		"minecraft:stone",
