@@ -153,8 +153,6 @@ function trashcanThrash()
 		"byg:scoria_cobblestone",
 		"byg:soapstone",
 		"byg:rocky_stone",
-		"minecraft:cobblestone",
-		"minecraft:cobblestone",
 		"minecraft:stone",
 		"biomesoplenty:mud_ball",
 		"quark:root_item",
