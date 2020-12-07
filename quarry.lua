@@ -320,8 +320,11 @@ if USEMODEM then
 end
 
 out("\n\n\n-- WELCOME TO THE MINING TURTLE --\n\n")
--- t.refuelAll()
-t.refuelFromSlot2()
+local fuel = turtle.getFuelLevel()
+if fuel < 100 then
+    -- t.refuelAll()
+    t.refuelFromSlot2()
+end
 
 while true do
 
