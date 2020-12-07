@@ -1,9 +1,12 @@
 os.loadAPI("u")
 os.loadAPI("t")
 shell.run("z")
-t.refuelAll()
-t.refuelFromSlot2()
 local fuel = turtle.getFuelLevel()
+if fuel < 100 then
+    t.refuelAll()
+    t.refuelFromSlot2()
+end
+fuel = turtle.getFuelLevel()
 print("fuel level: ",fuel )
 print("Waiting for a bit in case")
 os.sleep(3)
