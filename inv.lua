@@ -147,7 +147,7 @@ function trashcanThrash()
 		-- "minecraft:andesite",
 		-- "blockus:bluestone",
 		-- "minecraft:diorite",
-		"minecraft:flint",
+		-- "minecraft:flint",
 		-- "minecraft:granite",
 		"minecraft:mossy_cobblestone",
 		-- "byg:scoria_cobblestone",
