@@ -151,16 +151,16 @@ function trashcanThrash()
 		-- "minecraft:granite",
 		"minecraft:mossy_cobblestone",
 		-- "byg:scoria_cobblestone",
-		"byg:soapstone",
-		"byg:rocky_stone",
+		-- "byg:soapstone",
+		-- "byg:rocky_stone",
 		"minecraft:stone",
 		"biomesoplenty:mud_ball",
 		"quark:root_item",
 		"minecraft:clay_ball",
-		"quark:limestone",
-		"minecraft:andesite",
-		"minecraft:gravel",
-		"minecraft:dirt"
+		-- "quark:limestone",
+		-- "minecraft:andesite",
+		-- "minecraft:gravel",
+		-- "minecraft:dirt"
 		}
 
 	turtle.digDown()
