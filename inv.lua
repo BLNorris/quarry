@@ -145,12 +145,12 @@ end
 function trashcanThrash()
 	local thrash = {
 		-- "minecraft:andesite",
-		"blockus:bluestone",
+		-- "blockus:bluestone",
 		-- "minecraft:diorite",
 		"minecraft:flint",
-		"minecraft:granite",
+		-- "minecraft:granite",
 		"minecraft:mossy_cobblestone",
-		"byg:scoria_cobblestone",
+		-- "byg:scoria_cobblestone",
 		"byg:soapstone",
 		"byg:rocky_stone",
 		"minecraft:stone",
