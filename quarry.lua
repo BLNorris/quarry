@@ -331,7 +331,7 @@ while true do
 	goDown()
 
 	local errorcode = mainloop()
-	dropInChest()
+	inv.dropOffItems()
 	
 	if errorcode ~= FULLINV then
 		break
