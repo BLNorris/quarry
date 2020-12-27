@@ -371,7 +371,7 @@ function getPosition()
 		
 		x,y,z = gps.locate(5)
 		count = count + 1
-		if x == nil do
+		if x == nil then
 			os.sleep(5)
 		end
 		-- if count > 20 then
