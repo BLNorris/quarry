@@ -10,18 +10,7 @@ fuel = turtle.getFuelLevel()
 print("fuel level: ",fuel )
 print("Waiting for a bit in case")
 os.sleep(3)
-local x,y,z = gps.locate(5)
-local count = 1
-while x == nil do
-    print("Trying to get gps fix. count=",count)
-    os.sleep(5)
-    x,y,z = gps.locate(5)
-    count = count + 1
-    if count > 20 then
-        print("Could not get gps fix")
-       os.exit() 
-    end
-end
+local x,y,z = t.getPosition()
 
 local has,a,b,c,d = u.GetStartPoint()
 if has then

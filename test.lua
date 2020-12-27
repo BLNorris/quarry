@@ -7,7 +7,7 @@ os.loadAPI("t")
 --West =  x-
 
 local  PATH = "quarryConfig"
-local x, y, z = gps.locate(5)
+local x, y, z = t.getPosition()
 local dir = t.getDirection()
 print("testing")
 print(x,y,z, dir)

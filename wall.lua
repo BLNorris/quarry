@@ -2,8 +2,8 @@ os.loadAPI("u")
 os.loadAPI("t")
 local containeraslot = 16
 
-local x,y,z = u.GetPosition()
-local dir = u.GetDirection()
+local x,y,z = t.GetPosition()
+local dir = t.GetDirection()
 print(x,y,z,dir)
 u.SaveStartPoint(x,y,z,dir)
 

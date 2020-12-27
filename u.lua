@@ -99,7 +99,3 @@ function RemoveStartPoint()
     return false
 end
 
-function GetPosition()
-    x, y, z = gps.locate(5)
-    return x,y,z
-end
