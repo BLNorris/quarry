@@ -364,6 +364,7 @@ function getPosition()
 	local x = nil
 	local y = nil
 	local z = nil
+	local count = 0
 
 	while x == nil do
 		print("Trying to get gps fix. count=",count)
