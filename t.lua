@@ -136,7 +136,7 @@ end
 function fw(l)
 	l=l or 1
 	
-    local x,y,z = getPosition()
+    -- local x,y,z = getPosition()
 	for i=1, l do
 		local tries = 0
 		while turtle.forward() ~= true do
@@ -152,8 +152,8 @@ function fw(l)
 		end
 	end
 	
-    local x1,y1,z1 = getPosition()
-	currentDirection = calcDiretion(x,z,x1,z1)
+    -- local x1,y1,z1 = getPosition()
+	-- currentDirection = calcDiretion(x,z,x1,z1)
 	return true
 end
 
@@ -370,6 +370,7 @@ function getPosition()
 		print("Trying to get gps fix. count=",count)
 		
 		x,y,z = gps.locate(5)
+		print(" @ [" .. x .. ", " .. y .. ", " .. z .. "]")
 		count = count + 1
 		if x == nil then
 			os.sleep(5)
