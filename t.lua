@@ -368,9 +368,12 @@ function getPosition()
 
 	while x == nil do
 		print("Trying to get gps fix. count=",count)
-		os.sleep(5)
+		
 		x,y,z = gps.locate(5)
 		count = count + 1
+		if x == nil do
+			os.sleep(5)
+		end
 		-- if count > 20 then
 		-- 	print("Could not get gps fix")
 		--    os.exit() 
