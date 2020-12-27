@@ -290,8 +290,10 @@ function getDirection()
 	then return currentDirection
 	end
 	local x,y,z = gps.locate(5)
+	out(x,y,z)
 	fw()
 	local x1,y1,z1 = gps.locate(5)
+	out(x1,y1,z1)
 	local dir = calcDiretion(x,z,x1,z1)
 	back()
 	return dir
@@ -435,6 +437,11 @@ function goTo(x,y,z)
 		curx,cury,curz = getPosition()
 		print(curx,cury,curz,currentDirection)
 	end
+end
+
+function out(s)
+	s2 = s .. " @ [" .. x .. ", " .. y .. ", " .. z .. "]"
+	print(s2)
 end
 
 --North = z-
