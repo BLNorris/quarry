@@ -134,7 +134,7 @@ function moveH()
 	if inv.isInventoryFull() then
 		out("Dropping thrash")
 		-- inv.dropThrash()
-		inv.trashcanThrash()
+		-- inv.trashcanThrash()
 		inv.dropOffItems()
 		-- if inv.isInventoryFull() then
 		-- 	out ("Stacking items")
