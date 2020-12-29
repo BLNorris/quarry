@@ -24,9 +24,13 @@ function mainloop()
         sleep(.1)
         redstone.setOutput("bottom", false)
         tz.fw()
+        tz.digDown()
         tz.fw()
+        tz.digDown()
         tz.fw()
+        tz.digDown()
         tz.fw()
+        tz.digDown()
         print("loop")
 end
 
