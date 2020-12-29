@@ -13,6 +13,9 @@ function mainloop()
                 then
                     break
                 end
+            elseif i==16
+            then
+                return "out"
             end
         end
         tz.digDown()
@@ -31,5 +34,9 @@ end
 t.refuelAll()
 
 while true do
-	local errorcode = mainloop()
+    local errorcode = mainloop()
+    if(errorcode == "out")
+    then
+        tz.back(256)
+    end
 end
