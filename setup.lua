@@ -24,7 +24,7 @@ local files ={
     "wsand"
 }
 
-for file in files do 
+for i,file in ipairs(files) do 
     print("Downloading " + file)
     shell.run("rm "+ file)
     shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/"+file+".lua "+ file)
