@@ -26,5 +26,7 @@ for i,file in ipairs(files) do
     shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/"..file..".lua ".. file)
 end
 
+shell.run("wget https://raw.githubusercontent.com/Siarko/ButtonApi/master/button.lua button")
+
 print("")
 print("Download successful!")

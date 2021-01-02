@@ -20,7 +20,21 @@ function SaveLayerHeight(layer)
         file.write(layer)
     end
 end
-    
+
+function GetMonitorSide()
+    local modemside = "right"
+    perfs = peripheral.getNames()
+    for i=1,#perfs do
+        local type = peripheral.getType(perfs[i])
+        if type == "monitor"
+        then
+            modemside = perfs[i]
+        end
+    end
+     print("monitor is on side:")
+     print (modemside)
+     return modemside
+end
 function OpenModem()
     local modemside = "right"
     perfs = peripheral.getNames()
