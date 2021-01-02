@@ -1,8 +1,3 @@
-print("Downloading 'quarry'")
-shell.run("rm quarry")
-shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/quarry.lua quarry")
-
-
 local files ={
     "quarry",
     "inv",
@@ -19,15 +14,16 @@ local files ={
     "bridgethin",
     "circle",
     "heylisten",
+    "wcontrol",
     "whead",
     "wkill",
     "wsand"
 }
 
 for i,file in ipairs(files) do 
-    print("Downloading " + file)
-    shell.run("rm "+ file)
-    shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/"+file+".lua "+ file)
+    print("Downloading " .. file)
+    shell.run("rm ".. file)
+    shell.run("wget https://raw.githubusercontent.com/BLNorris/quarry/master/"..file..".lua ".. file)
 end
 
 print("")
