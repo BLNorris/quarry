@@ -29,3 +29,9 @@ More flags and customization to come.
 * Proper rednet communication with maybe a proper monitor program that prints out a diagram of where the turtle is in real time, with options like "come back up".
 * Option not to throw, or specifying what "thrash" is.
 * Option to specify layer size, now hard coded as 16x16.
+
+
+
+wget https://raw.githubusercontent.com/BLNorris/quarry/master/z.lua z
+
+cp whead startup
