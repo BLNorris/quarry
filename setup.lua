@@ -13,6 +13,7 @@ local files ={
     "n",
     "bridgethin",
     "circle",
+    "circleup",
     "heylisten",
     "wcontrol",
     "whead",
