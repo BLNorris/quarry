@@ -1,3 +1,4 @@
+os.loadAPI("t")
 local r = 0
 currSlot = 1
 print("What radius of circle would you like me to create?")
@@ -108,7 +109,7 @@ y = 0
 
 while checkCoords(x,y) ~= true do
 
-  turtle.forward()
+  t.fw()
   x = x + 1
 
 end
@@ -130,7 +131,7 @@ while (coordsCount > 0 and spinsDone < 5) do
 
   if checkCoords(cX, cY) then
 
-    turtle.forward()
+    t.fw()
     findBlock()
     turtle.placeUp()
 
@@ -173,9 +174,9 @@ while (coordsCount > 0 and spinsDone < 5) do
 
     if checkCoords(cX,cY) then
 
-          turtle.forward()
+          t.fw()
           turtle.turnRight()
-          turtle.forward()
+          t.fw()
           turtle.turnLeft()
           findBlock()
           turtle.placeUp()
