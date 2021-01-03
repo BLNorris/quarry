@@ -18,7 +18,8 @@ local files ={
     "wcontrol",
     "whead",
     "wkill",
-    "wsand"
+    "wsand",
+    "z"
 }
 
 for i,file in ipairs(files) do 
